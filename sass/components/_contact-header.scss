@@ -1,0 +1,31 @@
+.contact__link {
+  @include flex(flex, null, null, null, center);
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  @include font(Roboto, 14px, 500, 1.4, 0.02em, var(--primary-text-color), null, none);
+  @include transition( color, null, null, var(--time), var(--timing-function));
+
+    &:hover, &:focus {
+      color: var(--accent-color);
+    }
+}
+
+.contact {
+  @include list(flex, null, null, null, auto, null, null)
+  
+    & .contact__item + .contact__item {
+      @include item(null, null, 50px, null, null, null, null)
+    }
+}
+
+.contact__item {
+  @include flex(flex, null, null, null, center)
+}
+
+.contact__icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  fill: currentColor;
+}

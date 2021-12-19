@@ -1,0 +1,19 @@
+//-------------Header//
+.logo {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  @include font(Raleway, 26px, 700, 1.2, 0.03em, var(--accent-color), null, none);
+}
+.logo__primary {
+  @include font(Raleway, 26px, 700, 1.2, 0.03em, var(--logo-primary-color), null, null);
+}
+//---------------Footer//
+
+.logo__secondary {
+  @include font(Raleway, 26px, 700, 1.2, 0.03em, var(--primary-white-color), null, null);
+}
+.logo_container .logo {
+  padding: 0;
+  margin-bottom: 20px;
+}

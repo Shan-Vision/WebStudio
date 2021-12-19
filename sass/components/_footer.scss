@@ -1,0 +1,7 @@
+.footer {
+  background-color: var(--header-bgc-color);
+  padding: 60px 0;
+}
+.footer--container {
+  @include flex(flex, null, null, null, baseline);
+}
