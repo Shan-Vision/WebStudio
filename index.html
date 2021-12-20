@@ -13,16 +13,16 @@
 </head> 
 <body>
       <!-- ----------------------------------------------------Header -->
-   <!-- <header class="header">
+    <header class="header">
       <div class="container container--flex">
-      <a href="./index.html" rel="noopener noreferrer" class="logo" lang="en">Web<span class="logo__primary">Studio</span></a>
-      <nav class="nav">
-         <ul class="nav__list">
-            <li class="nav__item"><a class="nav__link nav__link--curent" href="./index.html">Студия</a></li>
-            <li class="nav__item"><a class="nav__link" href="./portfolio.html">Портфолио</a></li>
-            <li class="nav__item"><a class="nav__link" href="">Контакты</a></li>
-         </ul>
-      </nav>
+         <a href="./index.html" rel="noopener noreferrer" class="logo" lang="en">Web<span class="logo__primary">Studio</span></a>
+         <nav class="nav">
+            <ul class="nav__list">
+               <li class="nav__item"><a class="nav__link nav__link--curent" href="./index.html">Студия</a></li>
+               <li class="nav__item"><a class="nav__link" href="./portfolio.html">Портфолио</a></li>
+               <li class="nav__item"><a class="nav__link" href="">Контакты</a></li>
+            </ul>
+         </nav>
          <ul class="contact">
             <li class="contact__item">
                <a class="contact__link" href="mailto:info@devstudio.com"><svg class="contact__icon">
@@ -34,18 +34,64 @@
                </svg>+38 096 111 11 11</a>
             </li>
          </ul>
+         <button class="mob-menu__btn mob-menu__btn--open" aria-expanded="false">
+            <svg class="open-btn__svg"  aria-label="Переключатель мобильного меню">
+               <use class="open-btn_icon mob-menu__icon" href="./images/icons/Menu-icon/menu-icon.svg#icon-menu"></use>
+            </svg>
+         </button>
+         <div class="mob-menu__container">
+           <div class="container mobile__container">
+               <button class="mob-menu__btn mob-menu__btn--close">
+                  <svg class="close-btn__svg">
+                     <use class="close-btn__icon mob-menu__icon" href="./images/icons/Menu-icon/menu-icon.svg#icon-cross"></use>
+                  </svg>
+               </button>
+               <div class="mob-menu__box">
+                  <ul class="mob-navigation__list">
+                     <li class="mob-navigation__item"><a class="mob-navigation__link mob-navigation__link--curent"
+                           href="./index.html">Студия</a></li>
+                     <li class="mob-navigation__item"><a class="mob-navigation__link" href="./portfolio.html">Портфолио</a></li>
+                     <li class="mob-navigation__item"><a class="mob-navigation__link" href="">Контакты</a></li>
+                  </ul>
+                  <div class="mob-menu__contacts">
+                     <ul class="mob-contact__list">
+                        <li class="mob-contact__item">
+                           <a class="mob-contact__link mob-contact__link--color" href="tel:+380961111111">+38 096 111 11 11</a>
+                        </li>
+                        <li class="mob-contact__item">
+                           <a class="mob-contact__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                        </li>
+                     </ul>
+                     <ul class="mob-social__list">
+                        <li class="mob-social__item">
+                           <a href="" class="mob-social__link mob-social__link--after">instagram</a>
+                        </li>
+                        <li class="mob-social__item">
+                           <a href="" class="mob-social__link mob-social__link--after">Twitter</a>
+                        </li>
+                        <li class="mob-social__item">
+                           <a href="" class="mob-social__link mob-social__link--after">Facebook</a>
+                        </li>
+                        <li class="mob-social__item">
+                           <a href="" class="mob-social__link">LinkedIn</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+           </div>
+         </div>
       </div>
-   </header> -->
+   </header>
    <main>
       <!------------------------------------------------------ Hero -->
-      <section class="section hero">
+      <!-- <section class="section hero">
          <div class="container">
             <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
             <button class="hero__button" type="button" data-modal-open>Заказать услугу</button>
          </div>
-      </section>
+      </section> -->
       <!-- -----------------------------------------------Особенности -->
-       <section class="features section">
+       <!-- <section class="features section">
          <div class="container">
             <h2 class="visually-hidden">Особенности</h2>
             <ul class="features__list">
@@ -87,9 +133,9 @@
                </li>
             </ul>
          </div>
-      </section>
+      </section> -->
       <!-- ---------------------------------------------Чем занимаемся-->
-       <section class="work section"> 
+       <!-- <section class="work section"> 
          <div class="container">
             <h2 class="work__title title">Чем мы занимаемся</h2>
             <ul class="work__list">
@@ -125,9 +171,9 @@
                </li>
             </ul>
          </div>
-      </section> 
+      </section>  -->
       <!-- ---------------------------------------------Наша команда -->
-      <section class="team">
+      <!-- <section class="team">
          <div class="container">
             <h2 class="team__title title">Наша команда</h2>
             <ul class="team__list">
@@ -302,9 +348,9 @@
                </li>
             </ul>
          </div>
-      </section>
+      </section> -->
       <!-- -----------------------------------------------Наши партнеры -->
-      <section class="section">
+      <!-- <section class="section">
          <div class="container">
             <h2 class="client__title title">Постоянные клиенты</h2>
             <ul class="client__list">
@@ -352,56 +398,59 @@
                </li>
             </ul>
          </div>
-      </section>
+      </section> -->
    </main>
    <!-------------------------------------------------------Footer -->
    <!-- <footer class="footer">
       <div class="container footer--container">
-        <div class="logo_container">
-         <a href="./index.html" rel="noopener noreferrer" class="logo" lang="en">Web<span
-            class="logo__secondary">Studio</span></a>
-         <address class="address">
-            <p class="address__destination">г. Киев, пр-т Леси Украинки, 26</p>
-            <ul class="address__list">
-               <li class="address__item"><a class="address__contact" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-               <li class="address__item"><a class="address__contact" href="tel:+380961111111">+38 096 111 11 11</a></li>
-            </ul>
-         </address>
-        </div>
-        <div class="join__container">
-           <p class="join__title">
-            присоединяйтесь
-           </p>
-           <ul class="join__list">
-              <li class="join__items">
-                 <a href="#" class="join__link"> 
-                  <svg class="join__icon">
-                     <use href="./images/icons-svg/symbol-defs.svg#icon-instagram-icon"></use>
-                  </svg>
-                 </a>
-               </li>
-              <li class="join__items">
-                 <a href="#" class="join__link">
-                 <svg class="join__icon">
-                    <use href="./images/icons-svg/symbol-defs.svg#icon-twitter-icon" ></use>
-                 </svg>   
+        <div class="footer__mob-tab">
+         <div class="logo_container">
+            <a href="./index.html" rel="noopener noreferrer" class="logo" lang="en">Web<span
+                  class="logo__secondary">Studio</span></a>
+            <address class="address">
+               <p class="address__destination">г. Киев, пр-т Леси Украинки, 26</p>
+               <ul class="address__list">
+                  <li class="address__item"><a class="address__contact" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                  </li>
+                  <li class="address__item"><a class="address__contact" href="tel:+380961111111">+38 096 111 11 11</a></li>
+               </ul>
+            </address>
+         </div>
+         <div class="join__container">
+            <p class="join__title">
+               присоединяйтесь
+            </p>
+            <ul class="join__list">
+               <li class="join__items">
+                  <a href="#" class="join__link">
+                     <svg class="join__icon">
+                        <use href="./images/icons/icons-svg/symbol-defs.svg#icon-instagram-icon"></use>
+                     </svg>
                   </a>
                </li>
-              <li class="join__items">
-                 <a href="#" class="join__link">
-                  <svg class="join__icon">
-                     <use href="./images/icons-svg/symbol-defs.svg#icon-facebook-icon" ></use>
-                  </svg>                 
-                 </a>
+               <li class="join__items">
+                  <a href="#" class="join__link">
+                     <svg class="join__icon">
+                        <use href="./images/icons/icons-svg/symbol-defs.svg#icon-twitter-icon"></use>
+                     </svg>
+                  </a>
                </li>
-              <li class="join__items">
-                 <a href="#" class="join__link">
-                  <svg class="join__icon">
-                     <use href="./images/icons-svg/symbol-defs.svg#icon-linkedin-icon" ></use>
-                  </svg>                     
-                 </a>
+               <li class="join__items">
+                  <a href="#" class="join__link">
+                     <svg class="join__icon">
+                        <use href="./images/icons/icons-svg/symbol-defs.svg#icon-facebook-icon"></use>
+                     </svg>
+                  </a>
                </li>
-           </ul>
+               <li class="join__items">
+                  <a href="#" class="join__link">
+                     <svg class="join__icon">
+                        <use href="./images/icons/icons-svg/symbol-defs.svg#icon-linkedin-icon"></use>
+                     </svg>
+                  </a>
+               </li>
+            </ul>
+         </div>
         </div>
         <div class="sign-up__container">
            <form action="" class="sign-up__form" >
@@ -411,7 +460,7 @@
                </div>
                <div class="button">
                   <button type="submit" class="button__sign-up">Подписаться<svg class="button__icon">
-                        <use href="./images/modal-icon/symbol-defs.svg#icon-sign-up"></use>
+                        <use href="./images/icons/modal-icon/symbol-defs.svg#icon-sign-up"></use>
                      </svg></button>
                </div>
             </form>
@@ -479,5 +528,6 @@
             </div> -->
 
    <script src="./js/modal.js"></script>
+   <script src="js/mobile-menu.js"></script>
  </body>
 </html>

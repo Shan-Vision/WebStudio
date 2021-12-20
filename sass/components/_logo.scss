@@ -1,19 +1,28 @@
 //-------------Header//
+.logo_container .logo {
+  padding: 0;
+  margin-bottom: 20px;
+}
 .logo {
   display: block;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  @include font(Raleway, 26px, 700, 1.2, 0.03em, var(--accent-color), null, none);
+  text-align: center;
+  @include font(Raleway, 24px, 700, 1.17, 0.03em, var(--accent-color), null, none);
+  @media screen and (min-width:1200px) {
+    @include font(Raleway, 26px, 700, 1.2, 0.03em, var(--accent-color), null, none);
+    text-align: left;
+  }
 }
 .logo__primary {
-  @include font(Raleway, 26px, 700, 1.2, 0.03em, var(--logo-primary-color), null, null);
+  @include font(Raleway, 24px, 700, 1.17, 0.03em, var(--logo-primary-color), null, null);
+  @media screen and (min-width:1200px) {
+    @include font(Raleway, 26px, 700, 1.2, 0.03em, var(--logo-primary-color), null, none);
+  }
 }
 //---------------Footer//
 
 .logo__secondary {
-  @include font(Raleway, 26px, 700, 1.2, 0.03em, var(--primary-white-color), null, null);
-}
-.logo_container .logo {
-  padding: 0;
-  margin-bottom: 20px;
+  @include font(Raleway, 24px, 700, 1.17, 0.03em, var(--primary-white-color), null, null);
+  @media screen and (min-width:1200px) {
+    @include font(Raleway, 26px, 700, 1.2, 0.03em, var(--primary-white-color), null, none);
+  }
 }

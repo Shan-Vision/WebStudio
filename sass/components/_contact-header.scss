@@ -1,4 +1,5 @@
 .contact__link {
+  display: none;
   @include flex(flex, null, null, null, center);
   padding-top: 32px;
   padding-bottom: 32px;
@@ -12,11 +13,13 @@
 }
 
 .contact {
-  @include list(flex, null, null, null, auto, null, null)
+  display: none;
+
+  // @include list(flex, null, null, null, auto, null, null)
   
-    & .contact__item + .contact__item {
-      @include item(null, null, 50px, null, null, null, null)
-    }
+  //   & .contact__item + .contact__item {
+  //     @include item(null, null, 50px, null, null, null, null)
+  //   }
 }
 
 .contact__item {

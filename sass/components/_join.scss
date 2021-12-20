@@ -1,9 +1,20 @@
 .join__container {
-  margin-left: 70px;
+  // margin-left: 70px;
+  margin-bottom: 60px;
+  @media screen and (min-width:768px) {
+    margin-bottom: 0;
+  }
+  @media screen and (min-width:1200px) {
+    margin-left: 70px;
+  }
 }
 
 .join__title {
-  @include font(Roboto, 14px, 700, 1.2, 0.03em, var(--primary-white-color), uppercase, null);
+  @include font(Roboto, 14px, 700, 1.14, 0.03em, var(--primary-white-color), uppercase, null); 
+  text-align: center;
+    @media screen and (min-width:1200px) {
+    @include font(Roboto, 14px, 700, 1.2, 0.03em, var(--primary-white-color), uppercase, null); 
+  }
   margin-bottom: 20px;
 }
 .join__list {

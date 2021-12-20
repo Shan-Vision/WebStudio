@@ -1,7 +1,21 @@
 .footer {
   background-color: var(--header-bgc-color);
   padding: 60px 0;
+
 }
 .footer--container {
-  @include flex(flex, null, null, null, baseline);
+  @media screen and (min-width:1200px) {
+    @include flex(flex, row, null, null, baseline);
+  }
+}
+.footer__mob-tab{
+  @include flex(flex, column, null, null, center);
+
+  @media screen and (min-width:768px) {
+    @include flex(flex, row, null, space-around, baseline);
+    margin-bottom: 60px;
+  }
+   @media screen and (min-width:1200px){
+     margin-bottom: 0;
+   }
 }

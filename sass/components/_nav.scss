@@ -1,4 +1,8 @@
 .nav {
+  display: none;
+  @media screen and (min-width:768px) {
+    // display: block;
+  }
   margin-left: 93px;
 }
 .nav__list {
