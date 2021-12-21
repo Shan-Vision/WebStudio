@@ -4,8 +4,17 @@
   padding: 0;
   background-color: transparent;
   border: none;
-  color: green;
+  color: var(--modal-icon-input-color);
   cursor: pointer;
+  &:hover, &:focus{
+    color: var(--accent-color);
+  }
+  &.mob-menu__btn--open {
+  margin-left: auto;
+  @media screen and (min-width:768px) {
+    display: none;
+  }
+}
 }
 .open-btn__svg,
 .close-btn__svg {
@@ -16,9 +25,7 @@
   fill: currentColor;
   display: block;
 }
-.mob-menu__btn--open {
-  margin-left: auto;
-}
+
 // .close-btn__icon {
 //   display: none;
 // }
@@ -26,6 +33,7 @@
 // мобильное меню абсолютно спозиционированно к хедеру
 
 .mob-menu__container {
+  // display: none;
   @media screen and(max-width:767px) {
     position: fixed;
     top: 0;
@@ -35,6 +43,12 @@
     background-color: #fff;
     @include flex(flex, column, null, null, flex-start);
     z-index: 5;
+
+    transform: translateX(105%);
+    @include transition(transform, null, null, var(--time), var(--timing-function));
+  }
+  &.is-open{
+    transform: translateX(0);
   }
   @media screen and(min-width:768px) {
     display: none;
@@ -42,6 +56,13 @@
 }
 .mobile__container {
   position: relative;
+  width: 100%;
+  height: 100%;
+  @media screen and (min-width:480px) {
+    width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .mob-menu__btn--close {
   position: absolute;
@@ -50,10 +71,10 @@
 }
 
 .mob-menu__box {
-  // padding: 48px 40px;
+  padding: 48px 40px;
   width: 100%;
   height: 100%;
-  padding-left: 40px;
+  // padding-left: 40px;
   text-align-last: left;
   display: flex;
   flex-direction: column;
@@ -93,8 +114,8 @@
   }
 }
 .mob-social__list {
-  @include flex(flex, null, null, null, null);
-  margin-bottom: 48px;
+  @include flex(flex, null, wrap, null, null);
+  
 }
 
 .mob-social__link {

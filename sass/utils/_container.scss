@@ -21,10 +21,36 @@
 
   @media screen and (min-width: 768px) {
     width: 768px;
+    // padding: 0;
   }
   @media screen and (min-width: 1200px) {
     width: 1200px;
+    // margin-left: 200px;
+    // margin-right: 200px;
   }
 
+}
+.container--flex {
+  @include flex(flex, null, null, space-between, center);
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border: 1px solid red;
+
+  .logo{
+    text-align: left;
+  }
+
+  @media screen and(min-width:768px) {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+  @media screen and(min-width:1200px){
+    @include flex(flex, null, null, null, null);
+
+  }
+
+  
+  
+   
 }
 

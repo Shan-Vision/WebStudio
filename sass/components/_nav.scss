@@ -1,13 +1,17 @@
 .nav {
-  display: none;
-  @media screen and (min-width:768px) {
-    // display: block;
-  }
-  margin-left: 93px;
+  margin: 0 auto;
+  @media screen and(max-width:767px) {
+      display: none;
+    }
+  @media screen and(min-width:1200px) {
+    margin-left: 93px;
+    margin-right: 0;
+    
+  }  
 }
 .nav__list {
   @include list(flex, null, null, null, null, null, null);
-
+  
   & .nav__item + .nav__item {
     @include item(null, null, 50px, null, null, null, null)
   }
@@ -16,14 +20,14 @@
 .nav__link {
   position: relative;
   display: block;
-  padding-top: 32px;
   padding-bottom: 32px;
-
+  padding-top: 32px;
+  
+  // padding-top: 32px;
   @include font(Roboto, 14px, 500, 1.4, 0.02em, var(--title-text-color), null, none)
-  @include transition(color,null, null, var(--time), var(--timing-function));
+  @include transition(color, null, null, var(--time), var(--timing-function));
 
-
-   &:hover, &:focus{
+  &:hover, &:focus{
     color: var(--accent-color);
   }
 }

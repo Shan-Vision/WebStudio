@@ -24,26 +24,26 @@
             </ul>
          </nav>
          <ul class="contact">
-            <li class="contact__item">
+            <li class="contact__item contact__item--first">
                <a class="contact__link" href="mailto:info@devstudio.com"><svg class="contact__icon">
-                  <use href="./images/icons-svg/symbol-defs.svg#icon-mail-icon" ></use>
+                  <use href="./images/icons/icons-svg/symbol-defs.svg#icon-mail-icon" ></use>
                </svg>info@devstudio.com</a></li>
-            <li class="contact__item">
+            <li class="contact__item contact__item--second">
                <a class="contact__link" href="tel:+380961111111"><svg class="contact__icon">
-                  <use href="./images/icons-svg/symbol-defs.svg#icon-phone-icon" ></use>
+                  <use href="./images/icons/icons-svg/symbol-defs.svg#icon-phone-icon" ></use>
                </svg>+38 096 111 11 11</a>
             </li>
          </ul>
-         <button class="mob-menu__btn mob-menu__btn--open" aria-expanded="false">
+         <button class="mob-menu__btn mob-menu__btn--open js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
             <svg class="open-btn__svg"  aria-label="Переключатель мобильного меню">
                <use class="open-btn_icon mob-menu__icon" href="./images/icons/Menu-icon/menu-icon.svg#icon-menu"></use>
             </svg>
          </button>
-         <div class="mob-menu__container">
-           <div class="container mobile__container">
-               <button class="mob-menu__btn mob-menu__btn--close">
+         <div class="mob-menu__container js-menu-container" id="mobile-menu">
+           <div class="mobile__container">
+               <button class="mob-menu__btn mob-menu__btn--close js-close-menu">
                   <svg class="close-btn__svg">
-                     <use class="close-btn__icon mob-menu__icon" href="./images/icons/Menu-icon/menu-icon.svg#icon-cross"></use>
+                     <use class="close-btn__icon mob-menu__icon" href="./images/icons/Menu-icon/menu-icon.svg#icon-close"></use>
                   </svg>
                </button>
                <div class="mob-menu__box">
@@ -84,12 +84,12 @@
    </header>
    <main>
       <!------------------------------------------------------ Hero -->
-      <!-- <section class="section hero">
+      <section class="section hero">
          <div class="container">
             <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
             <button class="hero__button" type="button" data-modal-open>Заказать услугу</button>
          </div>
-      </section> -->
+      </section>
       <!-- -----------------------------------------------Особенности -->
        <!-- <section class="features section">
          <div class="container">
@@ -468,11 +468,11 @@
         </div>
       </div>
    </footer> -->
-            <!-- <div class="backdrop is-hidden" data-modal>
+            <div class="backdrop is-hidden" data-modal>
                <div class="modal">
                   <button class="close" data-modal-close>
                      <svg class="close__button">
-                        <use href="./images/modal-icon/symbol-defs.svg#icon-close-black"></use>
+                        <use href="./images/icons/modal-icon/symbol-defs.svg#icon-close-black"></use>
                      </svg>
                   </button>
                   <p class="modal__title">Оставьте свои данные, мы вам перезвоним</p>
@@ -483,7 +483,7 @@
                            <div class="form__icon-box">
                               <input type="text" name="user-name" id="user-name" class="form__input">
                               <svg class="form__icon-svg">
-                                 <use href="./images/modal-icon/symbol-defs.svg#icon-name"></use>
+                                 <use href="./images/icons/modal-icon/symbol-defs.svg#icon-name"></use>
                               </svg>
                            </div>
                         </div>
@@ -492,7 +492,7 @@
                            <div class="form__icon-box">
                               <input type="tel" name="user-tel" id="user-tel" class="form__input">
                               <svg class="form__icon-svg">
-                                 <use href="./images/modal-icon/symbol-defs.svg#icon-tel"></use>
+                                 <use href="./images/icons/modal-icon/symbol-defs.svg#icon-tel"></use>
                               </svg>
                            </div>
                         </div>
@@ -501,7 +501,7 @@
                            <div class="form__icon-box">
                               <input type="mail" name="user-mail" id="user-mail" class="form__input">
                               <svg class="form__icon-svg">
-                                 <use href="./images/modal-icon/symbol-defs.svg#icon-mail"></use>
+                                 <use href="./images/icons/modal-icon/symbol-defs.svg#icon-mail"></use>
                               </svg>
                            </div>
                         </div>
@@ -514,20 +514,23 @@
                            <input type="checkbox" name="user-policy" id="user-policy" class="form__input-policy visually-hidden">
                            <label for="user-policy" class="form__policy-text"><span class="form__border-checkbox">
                                  <svg class="form__icon-check" width="16" height="15">
-                                    <use href="./images/checkbox/checkbox-icon.svg#icon-check"></use>
+                                    <use href="./images/icons/checkbox/checkbox-icon.svg#icon-check"></use>
                                  </svg>
                               </span>
-                              Соглашаюсь с рассылкой и принимаю
-                              <a href="#" class="form__policy-link">Условия договора</a>
+                              <span>Соглашаюсь с рассылкой и принимаю
+                              <a href="#" class="form__policy-link">Условия договора</a></span>
                            </label>
                         </div>
                      </div>
                   </form> 
                   <button type="submit" class="button-submit">Отправить</button>
                </div>
-            </div> -->
+            </div>
 
    <script src="./js/modal.js"></script>
-   <script src="js/mobile-menu.js"></script>
+   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"></script>
+   <script defer src="js/mobile-menu.js"></script>
  </body>
 </html>

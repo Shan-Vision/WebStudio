@@ -11,6 +11,11 @@
     @include font(Raleway, 26px, 700, 1.2, 0.03em, var(--accent-color), null, none);
     text-align: left;
   }
+  @media screen and(min-width:768px) {
+    padding-bottom: 26px;
+    padding-top: 26px;
+
+  }
 }
 .logo__primary {
   @include font(Raleway, 24px, 700, 1.17, 0.03em, var(--logo-primary-color), null, null);

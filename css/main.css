@@ -141,6 +141,32 @@ body {
   }
 }
 
+.container--flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border: 1px solid red;
+}
+
+.container--flex .logo {
+  text-align: left;
+}
+
+@media screen and (min-width: 768px) {
+  .container--flex {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container--flex {
+    display: flex;
+  }
+}
+
 .section {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -160,19 +186,6 @@ body {
 .header {
   border-bottom: 1px solid var(--header-border-color);
   position: relative;
-}
-
-.container--flex {
-  padding-top: 16px;
-  padding-bottom: 16px;
-  border: 1px solid red;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.container--flex .logo {
-  text-align: left;
 }
 
 .logo_container .logo {
@@ -202,6 +215,13 @@ body {
     color: var(--accent-color);
     text-decoration: none;
     text-align: left;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    padding-bottom: 26px;
+    padding-top: 26px;
   }
 }
 
@@ -248,8 +268,20 @@ body {
 }
 
 .nav {
-  display: none;
-  margin-left: 93px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 767px) {
+  .nav {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .nav {
+    margin-left: 93px;
+    margin-right: 0;
+  }
 }
 
 .nav__list {
@@ -264,8 +296,8 @@ body {
 .nav__link {
   position: relative;
   display: block;
-  padding-top: 32px;
   padding-bottom: 32px;
+  padding-top: 32px;
   font-family: Roboto;
   font-size: 14px;
   font-weight: 500;
@@ -298,11 +330,8 @@ body {
 }
 
 .contact__link {
-  display: none;
   display: flex;
   align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
   font-family: Roboto;
   font-size: 14px;
   font-weight: 500;
@@ -319,13 +348,48 @@ body {
   color: var(--accent-color);
 }
 
-.contact {
-  display: none;
+@media screen and (max-width: 767px) {
+  .contact {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact {
+    display: flex;
+    margin-left: auto;
+  }
+  .contact .contact__item + .contact__item {
+    margin-left: 50px;
+    flex-basis: calc(100% /  - );
+  }
 }
 
 .contact__item {
   display: flex;
   align-items: center;
+}
+
+.contact__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.contact__item--first {
+  padding-top: 20px;
+}
+
+.contact__item--second {
+  padding-bottom: 20px;
+}
+
+@media screen and (min-width: 1200px) {
+  .contact__item {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .contact__item:not(:last-child) {
+    margin-bottom: 0px;
+  }
 }
 
 .contact__icon {
@@ -1160,32 +1224,40 @@ body {
   transition-timing-function: var(--timing-function);
 }
 
-.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
 .modal {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 40px;
-  min-width: 528px;
-  min-height: 581px;
+  width: 90%;
+  height: auto;
   background-color: #fff;
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+  }
 }
 
 .modal__title {
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   letter-spacing: 0.03em;
+  text-align: center;
   color: var(--modal-title-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .modal__title {
+    line-height: 1.15;
+  }
 }
 
 /*-------------------------------Modal Form ----------- */
@@ -1275,12 +1347,12 @@ body {
 }
 
 .form__policy-text {
+  border: 1px solid tomato;
   display: flex;
-  justify-content: center;
-  align-items: center;
   height: 15px;
-  font-size: 14px;
-  line-height: 1.71;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
 }
 
@@ -1323,20 +1395,20 @@ body {
 .form__policy-link {
   color: var(--modal-policy-link);
   text-decoration: underline;
-  font-size: 14px;
-  line-height: 1.71;
+  font-style: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   text-decoration-skip-ink: none;
-  margin-left: 3px;
 }
 
 .button-submit {
-  position: absolute;
-  left: 50%;
-  bottom: 40px;
-  transform: translateX(-50%);
   width: 200px;
   height: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--accent-color);
   color: var(--modal-button-submit-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -1380,8 +1452,22 @@ body {
   padding: 0;
   background-color: transparent;
   border: none;
-  color: green;
+  color: var(--modal-icon-input-color);
   cursor: pointer;
+}
+
+.mob-menu__btn:hover, .mob-menu__btn:focus {
+  color: var(--accent-color);
+}
+
+.mob-menu__btn.mob-menu__btn--open {
+  margin-left: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .mob-menu__btn.mob-menu__btn--open {
+    display: none;
+  }
 }
 
 .open-btn__svg,
@@ -1393,10 +1479,6 @@ body {
 .mob-menu__icon {
   fill: currentColor;
   display: block;
-}
-
-.mob-menu__btn--open {
-  margin-left: auto;
 }
 
 @media screen and (max-width: 767px) {
@@ -1411,7 +1493,15 @@ body {
     flex-direction: column;
     align-items: flex-start;
     z-index: 5;
+    transform: translateX(105%);
+    transition-property: transform;
+    transition-duration: var(--time);
+    transition-timing-function: var(--timing-function);
   }
+}
+
+.mob-menu__container.is-open {
+  transform: translateX(0);
 }
 
 @media screen and (min-width: 768px) {
@@ -1422,6 +1512,16 @@ body {
 
 .mobile__container {
   position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width: 480px) {
+  .mobile__container {
+    width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .mob-menu__btn--close {
@@ -1431,9 +1531,9 @@ body {
 }
 
 .mob-menu__box {
+  padding: 48px 40px;
   width: 100%;
   height: 100%;
-  padding-left: 40px;
   text-align-last: left;
   display: flex;
   flex-direction: column;
@@ -1487,7 +1587,7 @@ body {
 
 .mob-social__list {
   display: flex;
-  margin-bottom: 48px;
+  flex-wrap: wrap;
 }
 
 .mob-social__link {
