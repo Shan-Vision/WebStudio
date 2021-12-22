@@ -42,7 +42,7 @@
     height: 100vh;
     background-color: #fff;
     @include flex(flex, column, null, null, flex-start);
-    z-index: 5;
+    z-index: 999;
 
     transform: translateX(105%);
     @include transition(transform, null, null, var(--time), var(--timing-function));

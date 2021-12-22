@@ -91,7 +91,7 @@
          </div>
       </section>
       <!-- -----------------------------------------------Особенности -->
-       <!-- <section class="features section">
+        <section class="features section">
          <div class="container">
             <h2 class="visually-hidden">Особенности</h2>
             <ul class="features__list">
@@ -133,9 +133,9 @@
                </li>
             </ul>
          </div>
-      </section> -->
+      </section>
       <!-- ---------------------------------------------Чем занимаемся-->
-       <!-- <section class="work section"> 
+        <section class="work section"> 
          <div class="container">
             <h2 class="work__title title">Чем мы занимаемся</h2>
             <ul class="work__list">
@@ -171,9 +171,9 @@
                </li>
             </ul>
          </div>
-      </section>  -->
+      </section>  
       <!-- ---------------------------------------------Наша команда -->
-      <!-- <section class="team">
+      <section class="team">
          <div class="container">
             <h2 class="team__title title">Наша команда</h2>
             <ul class="team__list">
@@ -348,9 +348,9 @@
                </li>
             </ul>
          </div>
-      </section> -->
+      </section> 
       <!-- -----------------------------------------------Наши партнеры -->
-      <!-- <section class="section">
+      <section class="section">
          <div class="container">
             <h2 class="client__title title">Постоянные клиенты</h2>
             <ul class="client__list">
@@ -398,10 +398,10 @@
                </li>
             </ul>
          </div>
-      </section> -->
+      </section> 
    </main>
    <!-------------------------------------------------------Footer -->
-   <!-- <footer class="footer">
+   <footer class="footer">
       <div class="container footer--container">
         <div class="footer__mob-tab">
          <div class="logo_container">
@@ -467,65 +467,66 @@
               
         </div>
       </div>
-   </footer> -->
-            <div class="backdrop is-hidden" data-modal>
-               <div class="modal">
-                  <button class="close" data-modal-close>
-                     <svg class="close__button">
-                        <use href="./images/icons/modal-icon/symbol-defs.svg#icon-close-black"></use>
+   </footer>
+   <!--------------------------------------------------Modal/Backdrop -->
+   <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+         <button class="close" data-modal-close>
+            <svg class="close__button">
+               <use href="./images/icons/modal-icon/symbol-defs.svg#icon-close-black"></use>
+            </svg>
+         </button>
+         <p class="modal__title">Оставьте свои данные, мы вам перезвоним</p>
+         <form action="" class="form" autocomplete="on">
+            <div class="form__container">
+               <div class="form__box">
+                  <label for="user-name" class="form__label">Имя</label>
+                  <div class="form__icon-box">
+                     <input type="text" name="user-name" id="user-name" class="form__input">
+                     <svg class="form__icon-svg">
+                        <use href="./images/icons/modal-icon/symbol-defs.svg#icon-name"></use>
                      </svg>
-                  </button>
-                  <p class="modal__title">Оставьте свои данные, мы вам перезвоним</p>
-                  <form action="" class="form" autocomplete="on">
-                     <div class="form__container">
-                        <div class="form__box">
-                           <label for="user-name" class="form__label">Имя</label>
-                           <div class="form__icon-box">
-                              <input type="text" name="user-name" id="user-name" class="form__input">
-                              <svg class="form__icon-svg">
-                                 <use href="./images/icons/modal-icon/symbol-defs.svg#icon-name"></use>
-                              </svg>
-                           </div>
-                        </div>
-                        <div class="form__box">
-                           <label for="user-tel" class="form__label">Телефон</label>
-                           <div class="form__icon-box">
-                              <input type="tel" name="user-tel" id="user-tel" class="form__input">
-                              <svg class="form__icon-svg">
-                                 <use href="./images/icons/modal-icon/symbol-defs.svg#icon-tel"></use>
-                              </svg>
-                           </div>
-                        </div>
-                        <div class="form__box">
-                           <label for="user-mail" class="form__label">Почта</label>
-                           <div class="form__icon-box">
-                              <input type="mail" name="user-mail" id="user-mail" class="form__input">
-                              <svg class="form__icon-svg">
-                                 <use href="./images/icons/modal-icon/symbol-defs.svg#icon-mail"></use>
-                              </svg>
-                           </div>
-                        </div>
-                        <div class="form__box">
-                           <label for="user-comment" class="form__label">Комментарий</label>
-                           <textarea name="user-comment" id="user-comment" cols="30" rows="10" placeholder="Введите текст"
-                              class="form__comment"></textarea>
-                        </div>
-                        <div class="form__checkbox">
-                           <input type="checkbox" name="user-policy" id="user-policy" class="form__input-policy visually-hidden">
-                           <label for="user-policy" class="form__policy-text"><span class="form__border-checkbox">
-                                 <svg class="form__icon-check" width="16" height="15">
-                                    <use href="./images/icons/checkbox/checkbox-icon.svg#icon-check"></use>
-                                 </svg>
-                              </span>
-                              <span>Соглашаюсь с рассылкой и принимаю
-                              <a href="#" class="form__policy-link">Условия договора</a></span>
-                           </label>
-                        </div>
-                     </div>
-                  </form> 
-                  <button type="submit" class="button-submit">Отправить</button>
+                  </div>
+               </div>
+               <div class="form__box">
+                  <label for="user-tel" class="form__label">Телефон</label>
+                  <div class="form__icon-box">
+                     <input type="tel" name="user-tel" id="user-tel" class="form__input">
+                     <svg class="form__icon-svg">
+                        <use href="./images/icons/modal-icon/symbol-defs.svg#icon-tel"></use>
+                     </svg>
+                  </div>
+               </div>
+               <div class="form__box">
+                  <label for="user-mail" class="form__label">Почта</label>
+                  <div class="form__icon-box">
+                     <input type="mail" name="user-mail" id="user-mail" class="form__input">
+                     <svg class="form__icon-svg">
+                        <use href="./images/icons/modal-icon/symbol-defs.svg#icon-mail"></use>
+                     </svg>
+                  </div>
+               </div>
+               <div class="form__box">
+                  <label for="user-comment" class="form__label">Комментарий</label>
+                  <textarea name="user-comment" id="user-comment" cols="30" rows="10" placeholder="Введите текст"
+                     class="form__comment"></textarea>
+               </div>
+               <div class="form__checkbox">
+                  <input type="checkbox" name="user-policy" id="user-policy" class="form__input-policy visually-hidden">
+                  <label for="user-policy" class="form__policy-text"><span class="form__border-checkbox">
+                        <svg class="form__icon-check" width="16" height="15">
+                           <use href="./images/icons/checkbox/checkbox-icon.svg#icon-check"></use>
+                        </svg>
+                     </span>
+                     <span>Соглашаюсь с рассылкой и принимаю
+                     <a href="#" class="form__policy-link">Условия договора</a></span>
+                  </label>
                </div>
             </div>
+         </form> 
+         <button type="submit" class="button-submit">Отправить</button>
+      </div>
+   </div>
 
    <script src="./js/modal.js"></script>
    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"

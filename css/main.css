@@ -147,7 +147,6 @@ body {
   align-items: center;
   padding-top: 16px;
   padding-bottom: 16px;
-  border: 1px solid red;
 }
 
 .container--flex .logo {
@@ -841,7 +840,7 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  padding: 63px 24px;
+  padding: 77px 24px;
   background-color: var(--overflow-bgc-color);
   transform: translateY(101%);
   transition-property: transform;
@@ -852,6 +851,18 @@ body {
 .card__link:hover .overlay,
 .card__link:focus .overlay {
   transform: translateY(0);
+}
+
+@media scree and (min-width: 768px) {
+  .overlay {
+    padding: 49px 24px;
+  }
+}
+
+@media scree and (min-width: 1200px) {
+  .overlay {
+    padding: 63px 24px;
+  }
 }
 
 .overlay__caption {
@@ -894,26 +905,64 @@ body {
 
 .content__list {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
   margin-left: -8px;
-  margin-bottom: 50px;
+  align-content: space-between;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .content__list {
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .content__list {
+    margin-bottom: 50px;
+  }
 }
 
 .content__items {
   margin-left: 8px;
 }
 
-.card__list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -30px;
-  margin-bottom: -30px;
+@media screen and (max-width: 767px) {
+  .content__items {
+    margin-bottom: 15px;
+  }
 }
 
-.card__items {
-  margin-right: var(--gap);
-  margin-bottom: var(--gap);
-  flex-basis: calc(100% / 3 - var(--gap));
+@media screen and (min-width: 768px) {
+  .card__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -30px;
+    margin-bottom: -30px;
+  }
+}
+
+.card__items:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .card__items {
+    margin-right: var(--gap);
+    margin-bottom: var(--gap);
+    flex-basis: calc(100% / 2 - var(--gap));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .card__items {
+    margin-right: var(--gap);
+    margin-bottom: var(--gap);
+    flex-basis: calc(100% / 3 - var(--gap));
+  }
 }
 
 .card__body {
@@ -929,6 +978,14 @@ body {
 
 .card__link:hover, .card__link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+@media screen and (min-width: 768px) {
+  .card__link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 }
 
 .card-block__text {
@@ -1224,6 +1281,12 @@ body {
   transition-timing-function: var(--timing-function);
 }
 
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .modal {
   position: fixed;
   top: 50%;
@@ -1241,6 +1304,13 @@ body {
   .modal {
     width: 450px;
     height: 609px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    min-width: 528px;
+    min-height: 581px;
   }
 }
 
@@ -1264,6 +1334,7 @@ body {
 .form__container {
   margin: 0;
   padding: 0;
+  margin-bottom: 30px;
 }
 
 .form__container :nth-child(4) {
@@ -1342,18 +1413,23 @@ body {
 }
 
 /**------------------------- Checkbox */
-.form__checkbox {
-  margin-bottom: 30px;
-}
-
 .form__policy-text {
-  border: 1px solid tomato;
   display: flex;
   height: 15px;
   text-align: center;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.03em;
+}
+
+@media screen and (min-width: 1200px) {
+  .form__policy-text {
+    font-size: 14px;
+    line-height: 1.71;
+    justify-content: center;
+    align-items: center;
+    height: 24px;
+  }
 }
 
 .form__input-policy {
@@ -1399,6 +1475,13 @@ body {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-decoration-skip-ink: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .form__policy-link {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .button-submit {
@@ -1492,7 +1575,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    z-index: 5;
+    z-index: 999;
     transform: translateX(105%);
     transition-property: transform;
     transition-duration: var(--time);

@@ -24,10 +24,22 @@
 }
 
 .content__list {
-  @include flex(flex, null, null, center, null);
+  @include flex(flex, null, wrap, flex-start, center);
   margin-left: -8px;
-  margin-bottom: 50px;
+  align-content: space-between;
+  margin-bottom: 40px;
+
+  @media screen and(min-width:768px) {
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+  @media screen and(min-width:1200px){
+    margin-bottom: 50px;
+  }
 }
 .content__items{
   margin-left: 8px; 
+  @media screen and (max-width:767px) {
+    margin-bottom: 15px;
+  }
 }

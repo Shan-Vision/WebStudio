@@ -25,17 +25,66 @@
                </ul>
             </nav>
             <ul class="contact">
-               <li class="contact__item">
+               <li class="contact__item contact__item--first">
                   <a class="contact__link" href="mailto:info@devstudio.com"><svg class="contact__icon">
-                        <use href="./images/icons-svg/symbol-defs.svg#icon-mail-icon"></use>
+                        <use href="./images/icons/icons-svg/symbol-defs.svg#icon-mail-icon"></use>
                      </svg>info@devstudio.com</a>
                </li>
-               <li class="contact__item">
+               <li class="contact__item contact__item--second">
                   <a class="contact__link" href="tel:+380961111111"><svg class="contact__icon">
-                        <use href="./images/icons-svg/symbol-defs.svg#icon-phone-icon"></use>
+                        <use href="./images/icons/icons-svg/symbol-defs.svg#icon-phone-icon"></use>
                      </svg>+38 096 111 11 11</a>
                </li>
             </ul>
+            <button class="mob-menu__btn mob-menu__btn--open js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+               <svg class="open-btn__svg" aria-label="Переключатель мобильного меню">
+                  <use class="open-btn_icon mob-menu__icon" href="./images/icons/Menu-icon/menu-icon.svg#icon-menu"></use>
+               </svg>
+            </button>
+            <div class="mob-menu__container js-menu-container" id="mobile-menu">
+               <div class="mobile__container">
+                  <button class="mob-menu__btn mob-menu__btn--close js-close-menu">
+                     <svg class="close-btn__svg">
+                        <use class="close-btn__icon mob-menu__icon" href="./images/icons/Menu-icon/menu-icon.svg#icon-close">
+                        </use>
+                     </svg>
+                  </button>
+                  <div class="mob-menu__box">
+                     <ul class="mob-navigation__list">
+                        <li class="mob-navigation__item"><a class="mob-navigation__link"
+                              href="./index.html">Студия</a></li>
+                        <li class="mob-navigation__item"><a class="mob-navigation__link mob-navigation__link--curent" href="./portfolio.html">Портфолио</a>
+                        </li>
+                        <li class="mob-navigation__item"><a class="mob-navigation__link" href="">Контакты</a></li>
+                     </ul>
+                     <div class="mob-menu__contacts">
+                        <ul class="mob-contact__list">
+                           <li class="mob-contact__item">
+                              <a class="mob-contact__link mob-contact__link--color" href="tel:+380961111111">+38 096 111 11
+                                 11</a>
+                           </li>
+                           <li class="mob-contact__item">
+                              <a class="mob-contact__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                           </li>
+                        </ul>
+                        <ul class="mob-social__list">
+                           <li class="mob-social__item">
+                              <a href="" class="mob-social__link mob-social__link--after">instagram</a>
+                           </li>
+                           <li class="mob-social__item">
+                              <a href="" class="mob-social__link mob-social__link--after">Twitter</a>
+                           </li>
+                           <li class="mob-social__item">
+                              <a href="" class="mob-social__link mob-social__link--after">Facebook</a>
+                           </li>
+                           <li class="mob-social__item">
+                              <a href="" class="mob-social__link">LinkedIn</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
          </div>
       </header>
       <main>
@@ -64,7 +113,13 @@
                <li class="card__items">
                   <a href="" class="card__link">
                      <div class="card__body">
-                        <img class="card__image" width="370" height="294" src="./images/portfolio-img1-min.jpg" alt="Ноутбук">
+                        <picture>
+                           <source srcset="./images/portfolio/portfolio1.jpg 1x, ./images/portfolio/portfolio1-desktop@2x.jpg 2x" media="(min-width:1200px)">
+                           <source srcset="./images/portfolio/portfolio1-tablet@1x.jpg 1x, ./images/portfolio/portfolio1-tablet@2x.jpg 2x"
+                              media="(min-width:768px)">
+                           <source srcset="./images/portfolio/portfolio1-mob@1x.jpg 1x, ./images/portfolio/portfolio1-mob@2x.jpg 2x" media="(min-width:480px)">
+                           <img src="./images/portfolio/portfolio1.jpg" alt="Ноутбук" class="card__image">
+                        </picture>
                         <div class="overlay">
                            <p class="overlay__caption">
                               Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового
@@ -81,7 +136,15 @@
                <li class="card__items">
                   <a href="" class="card__link">
                      <div class="card__body">
-                        <img class="card__image" width="370" height="294" src="./images/portfolio-img2-min.jpg" alt="Постер">
+                        <picture>
+                           <source srcset="./images/portfolio/portfolio2.jpg 1x, ./images/portfolio/portfolio2-desktop@2x.jpg 2x"
+                              media="(min-width:1200px)">
+                           <source srcset="./images/portfolio/portfolio2-tablet@1x.jpg 1x, ./images/portfolio/portfolio2-tablet@2x.jpg 2x"
+                              media="(min-width:768px)">
+                           <source srcset="./images/portfolio/portfolio2-mob@1x.jpg 1x, ./images/portfolio/portfolio2-mob@2x.jpg 2x"
+                              media="(min-width:480px)">
+                           <img src="./images/portfolio/portfolio2.jpg" alt="Ноутбук" class="card__image">
+                        </picture>
                         <div class="overlay">
                            <p class="overlay__caption">
                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore culpa dignissimos vero dicta. Aspernatur eos voluptate dignissimos enim obcaecati ducimus?
@@ -97,7 +160,15 @@
                <li class="card__items">
                   <a href="" class="card__link">
                      <div class="card__body">
-                        <img class="card__image" width="370" height="294" src="./images/portfolio-img3-min.jpg" alt="Ресторан">
+                        <picture>
+                           <source srcset="./images/portfolio/portfolio3.jpg 1x, ./images/portfolio/portfolio3-desktop@2x.jpg 2x"
+                              media="(min-width:1200px)">
+                           <source srcset="./images/portfolio/portfolio3-tablet@1x.jpg 1x, ./images/portfolio/portfolio3-tablet@2x.jpg 2x"
+                              media="(min-width:768px)">
+                           <source srcset="./images/portfolio/portfolio3-mob@1x.jpg 1x, ./images/portfolio/portfolio3-mob@2x.jpg 2x"
+                              media="(min-width:480px)">
+                           <img src="./images/portfolio/portfolio3.jpg" alt="Ноутбук" class="card__image">
+                        </picture>
                         <div class="overlay">
                            <p class="overlay__caption">
                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore culpa dignissimos vero dicta. Aspernatur eos
@@ -114,7 +185,15 @@
                <li class="card__items">
                   <a href="" class="card__link">
                      <div class="card__body">
-                        <img class="card__image" width="370" height="294" src="./images/portfolio-img4-min.jpg" alt="Наушник">
+                        <picture>
+                           <source srcset="./images/portfolio/portfolio4.jpg 1x, ./images/portfolio/portfolio4-desktop@2x.jpg 2x"
+                              media="(min-width:1200px)">
+                           <source srcset="./images/portfolio/portfolio4-tablet@1x.jpg 1x, ./images/portfolio/portfolio4-tablet@2x.jpg 2x"
+                              media="(min-width:768px)">
+                           <source srcset="./images/portfolio/portfolio4-mob@1x.jpg 1x, ./images/portfolio/portfolio4-mob@2x.jpg 2x"
+                              media="(min-width:480px)">
+                           <img src="./images/portfolio/portfolio4.jpg" alt="Ноутбук" class="card__image">
+                        </picture>
                         <div class="overlay">
                            <p class="overlay__caption">
                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore culpa dignissimos vero dicta. Aspernatur eos
@@ -131,7 +210,15 @@
                <li class="card__items">
                   <a href="" class="card__link">
                      <div class="card__body">
-                        <img class="card__image" width="370" height="294" src="./images/portfolio-img5-min.jpg" alt="Коробки">
+                        <picture>
+                           <source srcset="./images/portfolio/portfolio5.jpg 1x, ./images/portfolio/portfolio5-desktop@2x.jpg 2x"
+                              media="(min-width:1200px)">
+                           <source srcset="./images/portfolio/portfolio5-tablet@1x.jpg 1x, ./images/portfolio/portfolio5-tablet@2x.jpg 2x"
+                              media="(min-width:768px)">
+                           <source srcset="./images/portfolio/portfolio5-mob@1x.jpg 1x, ./images/portfolio/portfolio5-mob@2x.jpg 2x"
+                              media="(min-width:480px)">
+                           <img src="./images/portfolio/portfolio5.jpg" alt="Ноутбук" class="card__image">
+                        </picture>
                         <div class="overlay">
                            <p class="overlay__caption">
                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore culpa dignissimos vero dicta. Aspernatur eos
@@ -148,7 +235,15 @@
                <li class="card__items">
                   <a href="" class="card__link">
                      <div class="card__body">
-                        <img class="card__image" width="370" height="294" src="./images/portfolio-img6-min.jpg" alt="Компьютер">
+                        <picture>
+                           <source srcset="./images/portfolio/portfolio6.jpg 1x, ./images/portfolio/portfolio6-desktop@2x.jpg 2x"
+                              media="(min-width:1200px)">
+                           <source srcset="./images/portfolio/portfolio6-tablet@1x.jpg 1x, ./images/portfolio/portfolio6-tablet@2x.jpg 2x"
+                              media="(min-width:768px)">
+                           <source srcset="./images/portfolio/portfolio6-mob@1x.jpg 1x, ./images/portfolio/portfolio6-mob@2x.jpg 2x"
+                              media="(min-width:480px)">
+                           <img src="./images/portfolio/portfolio6.jpg" alt="Ноутбук" class="card__image">
+                        </picture>
                         <div class="overlay">
                            <p class="overlay__caption">
                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore culpa dignissimos vero dicta. Aspernatur eos
@@ -165,7 +260,15 @@
                <li class="card__items">
                   <a href="" class="card__link">
                      <div class="card__body">
-                        <img class="card__image" width="370" height="294" src="./images/portfolio-img7-min.jpg" alt="Книга">
+                        <picture>
+                           <source srcset="./images/portfolio/portfolio7.jpg 1x, ./images/portfolio/portfolio7-desktop@2x.jpg 2x"
+                              media="(min-width:1200px)">
+                           <source srcset="./images/portfolio/portfolio7-tablet@1x.jpg 1x, ./images/portfolio/portfolio7-tablet@2x.jpg 2x"
+                              media="(min-width:768px)">
+                           <source srcset="./images/portfolio/portfolio7-mob@1x.jpg 1x, ./images/portfolio/portfolio7-mob@2x.jpg 2x"
+                              media="(min-width:480px)">
+                           <img src="./images/portfolio/portfolio7.jpg" alt="Ноутбук" class="card__image">
+                        </picture>
                         <div class="overlay">
                            <p class="overlay__caption">
                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore culpa dignissimos vero dicta. Aspernatur eos
@@ -182,7 +285,15 @@
                <li class="card__items">
                   <a href="" class="card__link">
                      <div class="card__body">
-                        <img class="card__image" width="370" height="294" src="./images/portfolio-img8-min.jpg" alt="Бирка">
+                        <picture>
+                           <source srcset="./images/portfolio/portfolio8.jpg 1x, ./images/portfolio/portfolio8-desktop@2x.jpg 2x"
+                           media="(min-width:1200px)">
+                           <source srcset="./images/portfolio/portfolio8-tablet@1x.jpg 1x, ./images/portfolio/portfolio8-tablet@2x.jpg 2x"
+                              media="(min-width:768px)">
+                           <source srcset="./images/portfolio/portfolio8-mob@1x.jpg 1x, ./images/portfolio/portfolio8-mob@2x.jpg 2x"
+                              media="(min-width:480px)">
+                           <img src="./images/portfolio/portfolio8.jpg" alt="Ноутбук" class="card__image">
+                        </picture>
                         <div class="overlay">
                            <p class="overlay__caption">
                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore culpa dignissimos vero dicta. Aspernatur eos
@@ -199,7 +310,15 @@
                <li class="card__items">
                   <a href="" class="card__link">
                      <div class="card__body">
-                        <img class="card__image" width="370" height="294" src="./images/portfolio-img9-min.jpg" alt="Бизнес">
+                        <picture>
+                           <source srcset="./images/portfolio/portfolio9.jpg 1x, ./images/portfolio/portfolio9-desktop@2x.jpg 2x"
+                              media="(min-width:1200px)">
+                           <source srcset="./images/portfolio/portfolio9-tablet@1x.jpg 1x, ./images/portfolio/portfolio9-tablet@2x.jpg 2x"
+                              media="(min-width:768px)">
+                           <source srcset="./images/portfolio/portfolio9-mob@1x.jpg 1x, ./images/portfolio/portfolio9-mob@2x.jpg 2x"
+                              media="(min-width:480px)">
+                           <img src="./images/portfolio/portfolio9.jpg" alt="Ноутбук" class="card__image">
+                        </picture>
                         <div class="overlay">
                            <p class="overlay__caption">
                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore culpa dignissimos vero dicta. Aspernatur eos
@@ -220,67 +339,76 @@
       <!-- Подвал -->
       <footer class="footer">
          <div class="container footer--container">
-            <div class="logo_container">
-               <a href="./index.html" rel="noopener noreferrer" class="logo" lang="en">Web<span
-                     class="logo__secondary">Studio</span></a>
-               <address class="address">
-                  <p class="address__destination">г. Киев, пр-т Леси Украинки, 26</p>
-                  <ul class="address__list">
-                     <li class="address__item"><a class="address__contact"
-                           href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-                     <li class="address__item"><a class="address__contact" href="tel:+380961111111">+38 096 111 11 11</a></li>
+            <div class="footer__mob-tab">
+               <div class="logo_container">
+                  <a href="./index.html" rel="noopener noreferrer" class="logo" lang="en">Web<span
+                        class="logo__secondary">Studio</span></a>
+                  <address class="address">
+                     <p class="address__destination">г. Киев, пр-т Леси Украинки, 26</p>
+                     <ul class="address__list">
+                        <li class="address__item"><a class="address__contact"
+                              href="mailto:info@devstudio.com">info@devstudio.com</a>
+                        </li>
+                        <li class="address__item"><a class="address__contact" href="tel:+380961111111">+38 096 111 11 11</a>
+                        </li>
+                     </ul>
+                  </address>
+               </div>
+               <div class="join__container">
+                  <p class="join__title">
+                     присоединяйтесь
+                  </p>
+                  <ul class="join__list">
+                     <li class="join__items">
+                        <a href="#" class="join__link">
+                           <svg class="join__icon">
+                              <use href="./images/icons/icons-svg/symbol-defs.svg#icon-instagram-icon"></use>
+                           </svg>
+                        </a>
+                     </li>
+                     <li class="join__items">
+                        <a href="#" class="join__link">
+                           <svg class="join__icon">
+                              <use href="./images/icons/icons-svg/symbol-defs.svg#icon-twitter-icon"></use>
+                           </svg>
+                        </a>
+                     </li>
+                     <li class="join__items">
+                        <a href="#" class="join__link">
+                           <svg class="join__icon">
+                              <use href="./images/icons/icons-svg/symbol-defs.svg#icon-facebook-icon"></use>
+                           </svg>
+                        </a>
+                     </li>
+                     <li class="join__items">
+                        <a href="#" class="join__link">
+                           <svg class="join__icon">
+                              <use href="./images/icons/icons-svg/symbol-defs.svg#icon-linkedin-icon"></use>
+                           </svg>
+                        </a>
+                     </li>
                   </ul>
-               </address>
-            </div>
-            <div class="join__container">
-               <p class="join__title">
-                  присоединяйтесь
-               </p>
-               <ul class="join__list">
-                  <li class="join__items">
-                     <a href="#" class="join__link">
-                        <svg class="join__icon">
-                           <use href="./images/icons-svg/symbol-defs.svg#icon-instagram-icon"></use>
-                        </svg>
-                     </a>
-                  </li>
-                  <li class="join__items">
-                     <a href="#" class="join__link">
-                        <svg class="join__icon">
-                           <use href="./images/icons-svg/symbol-defs.svg#icon-twitter-icon"></use>
-                        </svg>
-                     </a>
-                  </li>
-                  <li class="join__items">
-                     <a href="#" class="join__link">
-                        <svg class="join__icon">
-                           <use href="./images/icons-svg/symbol-defs.svg#icon-facebook-icon"></use>
-                        </svg>
-                     </a>
-                  </li>
-                  <li class="join__items">
-                     <a href="#" class="join__link">
-                        <svg class="join__icon">
-                           <use href="./images/icons-svg/symbol-defs.svg#icon-linkedin-icon"></use>
-                        </svg>
-                     </a>
-                  </li>
-               </ul>
+               </div>
             </div>
             <div class="sign-up__container">
-               <form action="" class="sugn-up__form">
+               <form action="" class="sign-up__form">
                   <div class="sign-up__box">
                      <label for="sign-up-mail" class="sign-up__label">Подпишитесь на рассылку</label>
                      <input type="email" name="sign-up-mail" id="sign-up-mail" class="sign-up__input" placeholder="E-mail">
                   </div>
+                  <div class="button">
+                     <button type="submit" class="button__sign-up">Подписаться<svg class="button__icon">
+                           <use href="./images/icons/modal-icon/symbol-defs.svg#icon-sign-up"></use>
+                        </svg></button>
+                  </div>
                </form>
-               <div class="button">
-                  <button type="submit" class="button__sign-up">Подписаться<svg class="button__icon">
-                        <use href="./images/modal-icon/symbol-defs.svg#icon-sign-up"></use>
-                     </svg></button>
-               </div>
+      
             </div>
          </div>
       </footer>
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+         integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+         crossorigin="anonymous"></script>
+      <script defer src="js/mobile-menu.js"></script>
    </body>
 </html>
