@@ -10,6 +10,8 @@
 }
 .footer__mob-tab{
   @include flex(flex, column, null, null, center);
+  margin-bottom: 60px;
+
 
   @media screen and (min-width:768px) {
     @include flex(flex, row, null, space-around, baseline);

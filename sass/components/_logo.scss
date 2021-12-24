@@ -1,9 +1,17 @@
 //-------------Header//
-.logo_container .logo {
+.logo_container{
+  @media screen and (max-width:767px) {
+    margin-bottom: 60px;    
+  }
+  & .logo {
   padding: 0;
   margin-bottom: 20px;
 }
+}
+ 
 .logo {
+  padding-top: 16px;
+  padding-bottom: 16px;
   display: block;
   text-align: center;
   @include font(Raleway, 24px, 700, 1.17, 0.03em, var(--accent-color), null, none);

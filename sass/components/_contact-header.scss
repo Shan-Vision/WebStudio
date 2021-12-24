@@ -2,6 +2,12 @@
   @include flex(flex, null, null, null, center);
   // padding-top: 32px;
   // padding-bottom: 32px;
+  &--first{
+    padding-top: 20px;
+  }
+  &--second{
+    padding-bottom: 20px;
+  }
   
   @include font(Roboto, 14px, 500, 1.4, 0.02em, var(--primary-text-color), null, none);
   @include transition( color, null, null, var(--time), var(--timing-function));
@@ -35,12 +41,7 @@
   &:not(:last-child){
     margin-bottom: 10px;
   }
-  &--first{
-    padding-top: 20px;
-  }
-  &--second{
-    padding-bottom: 20px;
-  }
+  
   @media screen and(min-width:1200px) {
     padding-top: 32px;
     padding-bottom: 32px;

@@ -10,13 +10,15 @@
 
   opacity: 1;
   visibility: visible;
+  pointer-events:visible;
+  transform:scale(1); 
+  @include transition(opacity, visibility, transform, var(--time), var(--timing-function));
 
-  @include transition(bopacity, visibility, null, var(--time), var(--timing-function));
- 
-}
-
-.is-hidden {
+  &.is-hidden {
   opacity: 0;
   visibility: hidden;
-  pointer-events: none;
+  pointer-events:none;
+  transform: scale(0.7);
 }
+}
+

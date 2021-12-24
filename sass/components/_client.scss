@@ -4,14 +4,14 @@
 
 .client__list {
   @include flex(flex, null, wrap, null, null);
-  margin-left: -30px;
+  margin-right: -30px;
   margin-bottom: -30px;
   @media screen and (min-width: 1200px) {
     margin-bottom: 0;
   }
 }
 .client__item {
-  margin-left: 30px;
+  margin-right: 30px;
   margin-bottom: 30px;
   flex-basis: calc(100% / 2 - 30px);
   @media screen and (min-width: 768px) {

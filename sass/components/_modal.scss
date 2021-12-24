@@ -3,9 +3,12 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  opacity: 1;
   padding: 40px;
   width: 90%;
   height: auto;
+  
+
   @media screen and (min-width:480px) {
     width: 450px;
     height: 609px;
@@ -30,6 +33,10 @@
   letter-spacing: 0.03em;
   text-align: center;
   color: var(--modal-title-color);
+
+  @media screen and(max-width:480px) {
+    font-size: 4vw;
+  }
 
   @media screen and(min-width:1200px) {
     line-height: 1.15;    
@@ -121,6 +128,7 @@
 /**------------------------- Checkbox */
 .form__policy-text {
   display: flex;
+  align-items: center;
   height: 15px;
   text-align: center;
   font-size: 12px;
