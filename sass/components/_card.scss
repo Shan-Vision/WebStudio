@@ -1,11 +1,9 @@
 .card__list {
   @media screen and (min-width:768px) {
     @include list(flex, wrap, -30px, -30px, null, null, null);
-    
+      
   }
-  @media screen and(min-width:1200px) {
-    
-  }
+  
   
 }
 
@@ -29,7 +27,9 @@
 
 .card__link {
   text-decoration: none;
-  display: block;
+  // display: flex;
+  // flex-direction: column;
+  // height: 100%;
 
   transition: box-shadow 250ms var(--timing-function);
 
@@ -43,6 +43,9 @@
     flex-direction: column;
     height: 100%;
   }
+}
+.card__image{
+  width: 100%;
 }
 
 .card-block__text {
@@ -65,4 +68,5 @@
   padding: 20px 24px;
   border: 1px solid var(--content-border-color);
   border-top: 0;
+  flex-grow: 1;
 }

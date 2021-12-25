@@ -1,5 +1,5 @@
 .join__container {
-  // margin-left: 70px;
+ 
   @media screen and (min-width:768px) {
     margin-bottom: 0;
   }
@@ -13,6 +13,7 @@
   text-align: center;
     @media screen and (min-width:1200px) {
     @include font(Roboto, 14px, 700, 1.2, 0.03em, var(--primary-white-color), uppercase, null); 
+    text-align: left;
   }
   margin-bottom: 20px;
 }
